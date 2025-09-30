@@ -16,12 +16,12 @@ const chatOptions = {
   defaultLanguage: "en",
   initialMessages: [
     "Hi there! 👋",
-    "What do you want to know about Matt or when do you want to talk with him?",
+    "My name is Nathan. How can I assist you today?",
   ],
   i18n: {
     en: {
       title: "Hi there! 👋",
-      subtitle: "Matt built me to answer your questions or book an intro call.",
+      subtitle: "Start a chat. We're here to help you 24/7.",
       footer: "",
       getStarted: "New Conversation",
       inputPlaceholder: "Type your question..",
@@ -191,7 +191,7 @@ const Index = () => {
             {/* Left Column */}
             <div className="flex flex-col gap-6">
               <div className="bg-gray-100 rounded-xl p-6">
-                <h3 className="font-semibold text-lg mb-2 text-gray-900">Architecture</h3>
+                <h3 className="font-semibold text-lg mb-2" style={{ color: "rgb(0 81 255)" }}>Architecture</h3>
                 <p className="text-gray-700 mb-2">
                   The solution is built around an <span className="font-semibold">Orchestration Agent</span> that intelligently routes requests to specialized sub-agents:
                 </p>
@@ -208,7 +208,7 @@ const Index = () => {
                 </p>
               </div>
               <div className="bg-gray-100 rounded-xl p-6">
-                <h3 className="font-semibold text-lg mb-2 text-gray-900">Deployment</h3>
+                <h3 className="font-semibold text-lg mb-2" style={{ color: "rgb(0 81 255)" }}>Deployment</h3>
                 <ul className="list-disc list-inside text-gray-700 mb-2 pl-4">
                   <li>
                     Embedded via CDN onto a website built with Dyad’s Vibe coding environment.
@@ -225,7 +225,7 @@ const Index = () => {
             {/* Right Column */}
             <div className="flex flex-col gap-6">
               <div className="bg-gray-100 rounded-xl p-6">
-                <h3 className="font-semibold text-lg mb-2 text-gray-900">Core Components</h3>
+                <h3 className="font-semibold text-lg mb-2" style={{ color: "rgb(0 81 255)" }}>Core Components</h3>
                 <p className="mb-2">
                   <span className="font-semibold">Orchestration Agent:</span>
                   <ul className="list-disc list-inside pl-4 text-gray-700">
@@ -252,7 +252,7 @@ const Index = () => {
                 </p>
               </div>
               <div className="bg-gray-100 rounded-xl p-6">
-                <h3 className="font-semibold text-lg mb-2 text-gray-900">Key Technical Highlights</h3>
+                <h3 className="font-semibold text-lg mb-2" style={{ color: "rgb(0 81 255)" }}>Key Technical Highlights</h3>
                 <ul className="list-disc list-inside pl-4 text-gray-700">
                   <li>Agent orchestration: Decoupled routing logic ensures clean separation of concerns.</li>
                   <li>RAG (vector search): Provides grounded, context-aware answers.</li>
