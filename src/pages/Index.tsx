@@ -135,7 +135,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center" style={{ background: "#101330" }}>
+    <div className="min-h-screen flex flex-col items-center" style={{ background: "#101330" }}>
       <h1 className="text-white text-2xl font-bold mb-8 mt-8 select-none">
         I'm Matt Yang{" "}
         <span className="bouncy-pizza" role="img" aria-label="pizza">
@@ -160,6 +160,119 @@ const Index = () => {
             zIndex: 2,
           }}
         />
+      </div>
+      {/* Info Card Section */}
+      <div className="w-full flex justify-center px-2 sm:px-0 mt-12 mb-12">
+        <div className="bg-white rounded-2xl shadow-lg max-w-5xl w-full px-4 py-8 sm:px-10">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-2">
+            Building an Orchestration Agent for Q&amp;A and Calendar Booking
+          </h2>
+          <p className="text-gray-700 text-center mb-8 max-w-2xl mx-auto">
+            I designed and deployed a multi-agent system that can both answer questions about me and assist with booking intro calls directly on my calendar.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            {/* Left Column */}
+            <div className="flex flex-col gap-6">
+              <div className="bg-gray-100 rounded-xl p-6">
+                <h3 className="font-semibold text-lg mb-2 text-gray-900">Architecture</h3>
+                <p className="text-gray-700 mb-2">
+                  The solution is built around an <span className="font-semibold">Orchestration Agent</span> that intelligently routes requests to specialized sub-agents:
+                </p>
+                <ol className="list-decimal list-inside text-gray-700 mb-2 pl-4">
+                  <li>
+                    <span className="font-semibold">Q&amp;A Agent</span> – handles questions about me using RAG (retrieval-augmented generation).
+                  </li>
+                  <li>
+                    <span className="font-semibold">Calendar Agent</span> – checks availability and books meetings in Google Calendar.
+                  </li>
+                </ol>
+                <p className="text-gray-700">
+                  The orchestration agent ensures that the correct tool is invoked based on user intent, rather than overloading one model with multiple roles.
+                </p>
+              </div>
+              <div className="bg-gray-100 rounded-xl p-6">
+                <h3 className="font-semibold text-lg mb-2 text-gray-900">Deployment</h3>
+                <ul className="list-disc list-inside text-gray-700 mb-2 pl-4">
+                  <li>
+                    Embedded via CDN onto a website built with Dyad’s Vibe coding environment.
+                  </li>
+                  <li>
+                    Recruiters can ask questions (Q&amp;A agent) and book intro calls (Calendar agent).
+                  </li>
+                </ul>
+                <p className="text-gray-700">
+                  This creates a seamless, interactive experience that demonstrates my technical abilities while making it easy for recruiters to connect with me.
+                </p>
+              </div>
+            </div>
+            {/* Right Column */}
+            <div className="flex flex-col gap-6">
+              <div className="bg-gray-100 rounded-xl p-6">
+                <h3 className="font-semibold text-lg mb-2 text-gray-900">Core Components</h3>
+                <p className="mb-2">
+                  <span className="font-semibold">Orchestration Agent:</span>
+                  <ul className="list-disc list-inside pl-4 text-gray-700">
+                    <li>Built with OpenAI’s LLM as the underlying chat model.</li>
+                    <li>Uses a Simple Memory module for context across turns.</li>
+                    <li>Tools: Q&amp;A Agent, Calendar Agent, Think Tool (for reasoning).</li>
+                    <li>Prompting strategy: orchestrator only routes, never executes tasks.</li>
+                  </ul>
+                </p>
+                <p className="mb-2">
+                  <span className="font-semibold">Q&amp;A Agent (with RAG):</span>
+                  <ul className="list-disc list-inside pl-4 text-gray-700">
+                    <li>Docs uploaded from Google Drive, chunked &amp; embedded with OpenAI, stored in vector DB.</li>
+                    <li>Retrieves relevant chunks for grounded answers.</li>
+                    <li>Prompt ensures professional, on-topic responses.</li>
+                  </ul>
+                </p>
+                <p>
+                  <span className="font-semibold">Calendar Agent:</span>
+                  <ul className="list-disc list-inside pl-4 text-gray-700">
+                    <li>Checks availability and books via Google Calendar (OAuth secured).</li>
+                    <li>Never commits to availability without checking.</li>
+                  </ul>
+                </p>
+              </div>
+              <div className="bg-gray-100 rounded-xl p-6">
+                <h3 className="font-semibold text-lg mb-2 text-gray-900">Key Technical Highlights</h3>
+                <ul className="list-disc list-inside pl-4 text-gray-700">
+                  <li>Agent orchestration: Decoupled routing logic ensures clean separation of concerns.</li>
+                  <li>RAG (vector search): Provides grounded, context-aware answers.</li>
+                  <li>OAuth integration: Secured Google Calendar access for real scheduling.</li>
+                  <li>Memory management: Maintains natural, flowing conversations across turns.</li>
+                  <li>Web deployment: Embedded agent on a public-facing site with minimal developer overhead.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          {/* Agent Workflow Section */}
+          <div>
+            <h3 className="text-lg font-semibold text-blue-700 text-center mb-6">Agent Workflow</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <img
+                src="/orchestration.png"
+                alt="Orchestration workflow"
+                className="rounded-lg shadow-md bg-gray-200 object-contain w-full h-64"
+                style={{ background: "#22263a" }}
+              />
+              <img
+                src="/qna-agent.png"
+                alt="Q&A agent workflow"
+                className="rounded-lg shadow-md bg-gray-200 object-contain w-full h-64"
+                style={{ background: "#22263a" }}
+              />
+            </div>
+            <div className="flex justify-center">
+              <img
+                src="/calendar-agent.png"
+                alt="Calendar agent workflow"
+                className="rounded-lg shadow-md bg-gray-200 object-contain w-full md:w-2/3 h-80"
+                style={{ background: "#22263a" }}
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
