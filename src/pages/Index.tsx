@@ -150,10 +150,8 @@ const Index = () => {
           alt="Matt Yang with pizza"
           className="hidden lg:block rounded-2xl shadow-lg object-cover"
           style={{
-            width: 550,
-            height: 580,
-            margin-top: 50px,
-            margin-right: 30px,
+            width: 220,
+            height: 330,
             objectFit: "cover",
             background: "#22263a",
           }}
