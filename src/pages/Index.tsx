@@ -16,7 +16,7 @@ const chatOptions = {
   defaultLanguage: "en",
   initialMessages: [
     "Hi there! 👋",
-    "My name is Nathan. How can I assist you today?",
+    "What do you want to know about Matt or when do you want to talk with him?",
   ],
   i18n: {
     en: {
