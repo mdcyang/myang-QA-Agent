@@ -153,7 +153,7 @@ const Index = () => {
             width: 550,
             height: 580,
             margin-top: 50px,
-            margin
+            margin-right: 30px,
             objectFit: "cover",
             background: "#22263a",
           }}
