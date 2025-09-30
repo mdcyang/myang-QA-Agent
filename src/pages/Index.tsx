@@ -143,23 +143,38 @@ const Index = () => {
         </span>
         {" "}and this is my Agent.
       </h1>
-      <div
-        className="flex items-center justify-center rounded-lg shadow-lg"
-        style={{
-          width: 400,
-          height: 600,
-          background: "#101330",
-          position: "relative",
-        }}
-      >
-        <div
-          id="n8n-chat"
+      <div className="flex flex-row items-center justify-center gap-8">
+        {/* Matt Yang Image - hidden on md and below */}
+        <img
+          src="/matt-yang.png"
+          alt="Matt Yang with pizza"
+          className="hidden lg:block rounded-2xl shadow-lg object-cover"
           style={{
-            width: "100%",
-            height: "100%",
-            zIndex: 2,
+            width: 220,
+            height: 330,
+            objectFit: "cover",
+            background: "#22263a",
           }}
         />
+        {/* Chat Container */}
+        <div
+          className="flex items-center justify-center rounded-lg shadow-lg"
+          style={{
+            width: 400,
+            height: 600,
+            background: "#101330",
+            position: "relative",
+          }}
+        >
+          <div
+            id="n8n-chat"
+            style={{
+              width: "100%",
+              height: "100%",
+              zIndex: 2,
+            }}
+          />
+        </div>
       </div>
       {/* Info Card Section */}
       <div className="w-full flex justify-center px-2 sm:px-0 mt-12 mb-12">
