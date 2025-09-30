@@ -145,17 +145,19 @@ const Index = () => {
       </h1>
       <div className="flex flex-row items-center justify-center gap-8">
         {/* Matt Yang Image - hidden on md and below */}
-        <img
-          src="/matt-yang.png"
-          alt="Matt Yang with pizza"
-          className="hidden lg:block rounded-2xl shadow-lg object-cover"
-          style={{
-            width: 220,
-            height: 330,
-            objectFit: "cover",
-            background: "#22263a",
-          }}
-        />
+        <div className="hidden lg:block pt-[50px] pr-[30px]">
+          <img
+            src="/matt-yang.png"
+            alt="Matt Yang with pizza"
+            className="rounded-2xl shadow-lg object-cover"
+            style={{
+              width: 530,
+              height: 580,
+              objectFit: "cover",
+              background: "#22263a",
+            }}
+          />
+        </div>
         {/* Chat Container */}
         <div
           className="flex items-center justify-center rounded-lg shadow-lg"
