@@ -21,7 +21,7 @@ const chatOptions = {
   i18n: {
     en: {
       title: "Hi there! 👋",
-      subtitle: "Start a chat. We're here to help you 24/7.",
+      subtitle: "Matt built me to answer your questions or book an intro call.",
       footer: "",
       getStarted: "New Conversation",
       inputPlaceholder: "Type your question..",
