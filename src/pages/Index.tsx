@@ -41,7 +41,7 @@ const Index = () => {
       document.head.appendChild(link);
     }
 
-    // Inject the CSS variables for chat customization
+    // Inject the CSS variables for chat customization and input override
     if (!document.getElementById("n8n-chat-custom-vars")) {
       const style = document.createElement("style");
       style.id = "n8n-chat-custom-vars";
@@ -102,6 +102,57 @@ const Index = () => {
         .bouncy-pizza {
           display: inline-block;
           animation: bounce 1.2s infinite;
+        }
+        /* --- Chat input override styles --- */
+        #n8n-chat .n8n-chat__input-container {
+          display: flex !important;
+          align-items: center !important;
+          padding: 0.5rem 1rem !important;
+          background: #f2f4f8 !important;
+          border-top: 1px solid #e6e9f1 !important;
+          border-radius: 0 0 0.75rem 0.75rem !important;
+          gap: 0.5rem;
+        }
+        #n8n-chat .n8n-chat__input-container textarea,
+        #n8n-chat .n8n-chat__input-container input {
+          width: 100% !important;
+          min-width: 0 !important;
+          max-width: 100% !important;
+          height: 48px !important;
+          min-height: 48px !important;
+          max-height: 48px !important;
+          resize: none !important;
+          overflow-y: hidden !important;
+          border: none !important;
+          border-radius: 0.5rem !important;
+          font-size: 1rem !important;
+          line-height: 1.5 !important;
+          padding: 0 1rem !important;
+          background: #fff !important;
+          box-shadow: none !important;
+        }
+        #n8n-chat .n8n-chat__input-container textarea::-webkit-resizer {
+          display: none !important;
+        }
+        #n8n-chat .n8n-chat__input-container button,
+        #n8n-chat .n8n-chat__input-container .n8n-chat__send {
+          margin-left: 0.5rem !important;
+          height: 40px !important;
+          width: 40px !important;
+          min-width: 40px !important;
+          min-height: 40px !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          background: var(--chat--color-primary) !important;
+          color: #fff !important;
+          border-radius: 0.5rem !important;
+          border: none !important;
+          box-shadow: none !important;
+        }
+        #n8n-chat .n8n-chat__input-container .n8n-chat__send svg {
+          width: 22px !important;
+          height: 22px !important;
         }
       `;
       document.head.appendChild(style);
