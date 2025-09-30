@@ -92,6 +92,17 @@ const Index = () => {
           --chat--toggle--color: var(--chat--color-white);
           --chat--toggle--size: 64px;
         }
+        @keyframes bounce {
+          0%, 100% { transform: translateY(0);}
+          20% { transform: translateY(-12px);}
+          40% { transform: translateY(-20px);}
+          60% { transform: translateY(-12px);}
+          80% { transform: translateY(-4px);}
+        }
+        .bouncy-pizza {
+          display: inline-block;
+          animation: bounce 1.2s infinite;
+        }
       `;
       document.head.appendChild(style);
     }
@@ -124,7 +135,14 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex items-center justify-center" style={{ background: "#101330" }}>
+    <div className="min-h-screen flex flex-col items-center justify-center" style={{ background: "#101330" }}>
+      <h1 className="text-white text-2xl font-bold mb-8 mt-8 select-none">
+        I'm Matt Yang{" "}
+        <span className="bouncy-pizza" role="img" aria-label="pizza">
+          🍕
+        </span>
+        {" "}and this is my Agent.
+      </h1>
       <div
         className="flex items-center justify-center rounded-lg shadow-lg"
         style={{
